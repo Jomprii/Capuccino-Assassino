@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: fastapi-app
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: ./start.sh
+    plan: free
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: energy_meter_db
+          property: connectionString
+
+databases:
+  - name: energy_meter_db
+    plan: free
