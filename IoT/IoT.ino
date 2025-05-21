@@ -1,6 +1,6 @@
 #include <WiFi.h>
 #include <HTTPClient.h>
-#include "EmonLib.h"  // https://github.com/openenergymonitor/EmonLib
+#include "EmonLib.h"  
 
 #define WIFI_SSID "onin gwapo"
 #define WIFI_PASSWORD "12345678"
